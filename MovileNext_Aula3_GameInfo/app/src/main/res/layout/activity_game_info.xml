@@ -1,18 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GameInfoActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="game"
+            type="br.panaggio.movilenext_aula3_gameinfo.model.Game"/>
+    </data>
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.gameinfo.GameInfoActivity">
+
+        <ImageView
+            android:id="@+id/imageViewImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:image="@{game.imageUrl}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_foreground"/>
+
+        <TextView
+            android:id="@+id/textViewGameName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{game.name}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewImage"
+            tools:text="Game name"/>
+
+        <TextView
+            android:id="@+id/textViewLaunchYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(game.launchYear)}"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGameName"
+            app:layout_constraintStart_toEndOf="@+id/imageViewImage"
+            tools:text="Year"/>
+
+        <TextView
+            android:id="@+id/textViewClassic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Classic"
+            android:visibility="@{game.isClassic ? View.VISIBLE :View.GONE}"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLaunchYear"
+            app:layout_constraintStart_toEndOf="@+id/imageViewImage"
+            tools:text="Classic"/>
+
+        <TextView
+            android:id="@+id/textViewRating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(game.rating)}"
+            app:layout_constraintTop_toBottomOf="@+id/textViewClassic"
+            app:layout_constraintStart_toEndOf="@+id/imageViewImage"
+            tools:text="Rating"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
