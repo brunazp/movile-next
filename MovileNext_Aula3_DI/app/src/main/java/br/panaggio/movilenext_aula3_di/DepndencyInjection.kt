@@ -1,5 +1,5 @@
 package br.panaggio.movilenext_aula3_di
-
+/*
 class Tweeter(
         val api: TwitterApi,
         val user: String) {
@@ -47,4 +47,4 @@ fun execute() {
     for (tweet in timeline.get()) {
         println(tweet)
     }
-}
+}*/
