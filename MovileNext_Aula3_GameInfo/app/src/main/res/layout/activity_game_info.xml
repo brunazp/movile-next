@@ -47,7 +47,7 @@
             android:id="@+id/textViewClassic"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Classic"
+            android:text="@string/classic"
             android:visibility="@{game.isClassic ? View.VISIBLE :View.GONE}"
             app:layout_constraintTop_toBottomOf="@+id/textViewLaunchYear"
             app:layout_constraintStart_toEndOf="@+id/imageViewImage"
@@ -61,6 +61,17 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewClassic"
             app:layout_constraintStart_toEndOf="@+id/imageViewImage"
             tools:text="Rating"/>
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/game_name"
+            android:inputType="textPersonName"
+            android:text="@={game.name}"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
     </android.support.constraint.ConstraintLayout>
 </layout>

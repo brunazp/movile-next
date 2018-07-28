@@ -6,7 +6,7 @@ import br.panaggio.movilenext_aula3_gameinfo.utils.bindable
 import com.android.databinding.library.baseAdapters.BR
 
 class Game(
-        val name: String,
+        name: String,
         val launchYear: Int,
         val imageUrl: String,
         rating: Double) : BaseObservable() {
@@ -21,6 +21,9 @@ class Game(
                 notifyPropertyChanged(BR.rating)
             }
         }*/
+
+    @get:Bindable
+    var name by bindable(name, BR.name)
 
     @get:Bindable
     var rating by bindable(rating, BR.rating)

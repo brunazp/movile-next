@@ -8,4 +8,26 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="LabelTitle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LabelField">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LabelFieldInfo">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
 </resources>

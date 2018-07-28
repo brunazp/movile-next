@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MovileNext_Aula3_GameInfo</string>
+    <string name="game_name">Game Name</string>
+    <string name="classic">Classic</string>
 </resources>
