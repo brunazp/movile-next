@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NotificationCreator</string>
+    <string name="notification_title_hint">Notification Title</string>
+    <string name="notification_body_hint">Notification Body</string>
+    <string name="option_glide">Glide</string>
+    <string name="option_picasso">Picasso</string>
+    <string name="inclide_action_buttons">Include Action Buttons</string>
+    <string name="button_create_notification">Create Notification</string>
+    <string name="channel">Default</string>
+    <string name="open">Open</string>
+</resources>
