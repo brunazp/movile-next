@@ -2,4 +2,11 @@
     <string name="app_name">MovileNext_Aula3_GameInfo</string>
     <string name="game_name">Game Name</string>
     <string name="classic">Classic</string>
+    <string name="add_game">Add Game</string>
+    <string name="name">Name</string>
+    <string name="launch_year">Launch year</string>
+    <string name="image_url">Image url</string>
+    <string name="rating">Rating</string>
+    <string name="add">Add</string>
+    <string name="clear">Clear</string>
 </resources>
