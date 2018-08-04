@@ -28,4 +28,16 @@ class LoginActivityInstrumentedTest {
         // check if textview was updated
         onView(withText("Bruna Panaggio")).check(matches(isDisplayed()))
     }
+
+    @Test
+    fun loginButton_shouldFailLogin() {
+        //Type login on edit text
+        onView(withHint(R.string.email_hint)).perform(typeText("admin2@admin.com"))
+
+        //Tap login button
+        onView(withText(R.string.login)).perform(click())
+
+        // check if textview was updated
+        onView(withText("Login Failed")).check(matches(isDisplayed()))
+    }
 }

@@ -15,7 +15,7 @@ class LoginActivityTest {
     fun loadActivitySouldShowHelloWorld() {
         val activity = Robolectric.setupActivity(LoginActivity::class.java)
 
-        val results = activity.findViewById<TextView>(R.id.textView)
+        val results = activity.findViewById<TextView>(R.id.textViewStatus)
         assertThat(results.text.toString(), equalTo("Hello World!"))
     }
 
@@ -24,7 +24,7 @@ class LoginActivityTest {
     fun loadActivitySouldShowHelloWorld2() {
         val activity = Robolectric.setupActivity(LoginActivity::class.java)
 
-        val results = activity.findViewById<TextView>(R.id.textView)
+        val results = activity.findViewById<TextView>(R.id.textViewStatus)
         assertThat(results.text.toString(), equalTo("Hello World!"))
     }
 }
