@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MovileNext_Aula4_LoginApp</string>
+    <string name="email_hint">Type your email</string>
+    <string name="login">Login</string>
 </resources>
