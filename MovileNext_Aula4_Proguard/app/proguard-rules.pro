@@ -19,3 +19,15 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-dontwarn com.google.errorprone.**
+-dontwarn sun.misc.Unsafe
+-dontwarn java.lang.ClassValue
+
+-keep,allowshrinking class com.androidplot.Plot {}
+-keep,allowshrinking class * extends com.androidplot.Plot {}
+
+-keepclassmember class com.androidplot.** {
+*** get*();
+void set*(***);
+}
